@@ -10,12 +10,20 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="nav-bar">
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<div class="navbar">
+  <div class="logo">Jill Daniel</div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
 
   <!-- Hero Banner -->
   <section class="about-hero fade-in delay-1">
@@ -63,6 +71,14 @@
       I believe that with the right mindset and knowledge, I can help shape a better tomorrow — for my country, my continent, and the world.
     </p>
   </section>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("active");
+  }
+</script>
+
 
 </body>
 </html>

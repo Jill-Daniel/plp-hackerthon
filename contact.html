@@ -11,13 +11,21 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="nav-bar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
 
+<div class="navbar">
+  <div class="logo">Jill Daniel</div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
   <!-- Contact Section -->
   <section class="contact-section fade-in delay-1" id="contact">
     <h2>Contact Me</h2>
@@ -58,6 +66,14 @@
   </div>
 </footer>
 
+
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>

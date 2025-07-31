@@ -12,12 +12,21 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="nav-bar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html" class="active">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  
+<div class="navbar">
+  <div class="logo">Jill Daniel</div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
 
   <!-- Projects Section -->
   <section class="projects-section fade-in delay-1" id="projects">
@@ -72,6 +81,14 @@
     </div>
   </div>
 </footer>
+
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("active");
+  }
+</script>
 
 
 </body>
